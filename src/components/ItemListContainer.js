@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import {Button, Card} from 'react-bootstrap';
 import ItemCount from "./ItemCount"
 
 const ItemListContainer = ({nameEcomerce}) =>{
@@ -33,16 +34,23 @@ const ItemListContainer = ({nameEcomerce}) =>{
             <h1>Bienvenidos a {nameEcomerce}</h1>
             <h2>Esto es ItemListContainer</h2>
             <ItemCount stock={15} initial={1} />
-            {products.map((product) =>{
-                return(
-                   <>
-                    <div>{product.title}</div>
-                    <img src={product.image} alt="imagen"></img>
-                   
-                   </>
-                 
-                )
-            })}
+            <h2>Productos</h2>
+            <div className="item-grid">
+                {products.map((product) =>{
+                    return(
+                        <Card className="item-card">
+                            <Card.Img className="item-img" src={product.image} />
+                            <Card.Body className="card-body">
+                                <Card.Title className="card-title">{product.title}</Card.Title>
+                                <Card.Text>${product.price}</Card.Text>
+                
+                            </Card.Body>
+                        </Card>
+                    
+                    )
+                })}
+
+            </div>
         </div>
     )
 }

@@ -1,5 +1,9 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
-
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body{
     background-color: rgb(245, 245, 19);
     display: flex;
@@ -27,4 +31,48 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(45deg, #d7d7d7, white, #d7d7d7);
+}
+
+.item-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(auto);
+    padding: 3%;
+}
+
+.item-card{
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    padding: 2%;
+    box-shadow: black 1px 1px 6px;
+    cursor: pointer;
+}
+.item-card:hover{
+    transform: scale(1.03);
+    transition: all 0.5s ease-in-out;
+}
+
+.item-img{
+    width: 45%;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    padding: 2%;
+}
+
+.card-title{
+    font-size: 0.8rem;
+}
+
+.card-button{
+    width: 100%;
 }
