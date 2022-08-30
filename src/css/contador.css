@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Poppins&family=Silkscreen&display=swap');
+
+/*
+font-family: 'Alumni Sans Collegiate One', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Silkscreen', cursive;
+*/
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+h3{
+  text-decoration: underline;  
+}
+p{
+    
+}
+span{
+    font-family: 'Silkscreen', cursive;
+}
+button{
+    width: 30%;
+    margin: auto;
+    background-color: yellow;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+.botones button:nth-child(1){
+    background-color: red;
+    color: white;
+}
+.botones button:nth-last-child(1){
+    background-color: green;
+    color: white;
+}
+
