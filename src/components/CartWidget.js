@@ -3,9 +3,9 @@ import "../css/app.css"
 
 const CartWidget = () =>{
     return(
-        <div>
-            <img src={icono} alt="carrito"></img>
-        </div>
+        
+            <img className="nav-cart" src={icono} alt="carrito"></img>
+        
     )
 }
 

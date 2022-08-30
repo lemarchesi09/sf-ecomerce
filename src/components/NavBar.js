@@ -1,18 +1,19 @@
 import CartWidget from "./CartWidget"
 import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
 
-const NavBar = () =>{
+const NavBar = ({nameEcomerce}) =>{
     return(
         <div className='nav-container'>
-            <h2>Esto es NavBar</h2>
-            <Navbar bg="light" expand="lg">
+            <Navbar  expand="lg">
                 <Container className='rb-nav-cont'>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="#home">{nameEcomerce}</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Link</Nav.Link>
+                        <Nav.Link href="#link">Contact</Nav.Link>
+                        <Nav.Link href="#link">Products</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">
@@ -23,8 +24,8 @@ const NavBar = () =>{
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
-            </Navbar>
             <CartWidget />
+            </Navbar>
         </div>
     )
 }
