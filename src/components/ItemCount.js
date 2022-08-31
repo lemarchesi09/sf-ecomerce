@@ -31,7 +31,7 @@ const ItemCount = ({stock, initial}) =>{
                 <Button variant="dark" onClick={decrease}>-</Button>
                 <Button variant="dark" onClick={increase}>+</Button>
                 
-                <Button variant="dark">Add to Cart</Button>
+                
             </div>
         </div>
     )

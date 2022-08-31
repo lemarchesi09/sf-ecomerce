@@ -87,3 +87,19 @@ body{
 .card-button{
     width: 100%;
 }
+
+/*      Detalles        */
+
+.detalle-cont{
+    display: flex;
+}
+
+.detalle-texto{
+    display: flex;
+    flex-direction: column;
+}
+.imagen-prod{
+    width: 50%;
+    height:300px;
+    background-color: red;
+}
