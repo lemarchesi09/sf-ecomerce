@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer nameEcomerce = {nombre}/>} />
           <Route path="/detalles/:id" element={<Detalles />}/>
+          <Route path="*" element={<ItemListContainer nameEcomerce = {nombre}/>} />
         </Routes>
           
         </header>
