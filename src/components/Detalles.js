@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import {Card, Button} from 'react-bootstrap'
 import {Link, useLocation} from 'react-router-dom'
+import ItemCount from './ItemCount'
 
 const Detalles = () =>{
 
@@ -32,6 +33,9 @@ const Detalles = () =>{
                 <p>Price: ${item.price}</p>
                 <p>Description: {item.description}</p>
                 <p>Lorem asdasbd ndkanskak sdsaj kd jaskdjask djajsda sndjasn jdanskdjansn naksjdnaksjndkj asjdnksand sadjasn</p>
+                <ItemCount/>
+                <Button variant="dark">Add to Cart</Button>
+
             </div>
        </div>
     )

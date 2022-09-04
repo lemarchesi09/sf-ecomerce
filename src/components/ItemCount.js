@@ -1,10 +1,11 @@
 import { useState } from "react"
 import {Button} from 'react-bootstrap';
 
-const ItemCount = ({stock, initial}) =>{
+const ItemCount = () =>{
 
+    let stock = 15;
+    let initial = 1
     const [count, setCount] = useState(initial)
-
     const increase = () => {
         console.log("Adding a Tuki");
         if (count<stock) {
@@ -22,11 +23,7 @@ const ItemCount = ({stock, initial}) =>{
     }
     return(
         <div>
-            <h2>Esto es ItemCount</h2>
-
-            <h2> Contador</h2>
             <p>Items : <span>{count}</span> </p>
-
             <div className="botones">
                 <Button variant="dark" onClick={decrease}>-</Button>
                 <Button variant="dark" onClick={increase}>+</Button>

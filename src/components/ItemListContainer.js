@@ -34,9 +34,6 @@ const ItemListContainer = ({nameEcomerce}) =>{
         
         <div className="item-list-cont">
             <h1>Bienvenidos a {nameEcomerce}</h1>
-            <h2>Esto es ItemListContainer</h2>
-            <ItemCount stock={15} initial={1} />
-            <h2>Productos</h2>
             <ItemList products={products}/>
  
         </div>
