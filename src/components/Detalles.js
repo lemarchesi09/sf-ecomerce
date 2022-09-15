@@ -1,19 +1,24 @@
 import { useEffect, useState } from 'react'
 import {Card, Button} from 'react-bootstrap'
-import {Link, useLocation} from 'react-router-dom'
+import {Link, useLocation, useParams} from 'react-router-dom'
 import ItemCount from './ItemCount'
 
 const Detalles = () =>{
 
     const [item, setItem] = useState({})
     // Traer prop usando Link y useLocation
-    const location = useLocation()
-    const productId = location.state
-    console.log('Product Id:', productId);
+    // const location = useLocation()
+    // const productId = location.state
+    // console.log('Product Id:', productId);
+
+    
+    // Traer prop usando useParams()
+    const { id } = useParams()
+    console.log('use params', id);
 
     //Pedido Fetch a la API para solicitar un producto
     const getProduct = () =>{
-        fetch(`https://fakestoreapi.com/products/${productId}`)
+        fetch(`https://fakestoreapi.com/products/${id}`)
                 .then(res=>res.json())
                 .then(data => setItem(data))
 
@@ -32,7 +37,6 @@ const Detalles = () =>{
                 <h3>{item.title}</h3>
                 <p>Price: ${item.price}</p>
                 <p>Description: {item.description}</p>
-                <p>Lorem asdasbd ndkanskak sdsaj kd jaskdjask djajsda sndjasn jdanskdjansn naksjdnaksjndkj asjdnksand sadjasn</p>
                 <ItemCount/>
                 <Button variant="dark">Add to Cart</Button>
 

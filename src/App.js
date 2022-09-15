@@ -6,6 +6,7 @@ import Item from "./components/Item";
 import Detalles from "./components/Detalles";
 import Category from "./components/Category";
 
+
 function App() {
   const nombre = "Mercado Mimbre"
   return (
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer nameEcomerce = {nombre}/>} />
           <Route path="/detalles/:id" element={<Detalles />}/>
-          <Route path="/category/ropa" element={<Category />}/>
+          <Route path="/category/:category" element={<ItemListContainer nameEcomerce = {nombre}/>} />
           <Route path="*" element={<ItemListContainer nameEcomerce = {nombre}/>} />
         </Routes>
           

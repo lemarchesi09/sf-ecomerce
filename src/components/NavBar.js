@@ -20,15 +20,15 @@ const NavBar = ({nameEcomerce}) =>{
                         <Nav.Link href="#action2">Link</Nav.Link>
                         <NavDropdown title="Categorias" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">
-                            <Link to='/category/ropa' element={<Category ropa={Attr.to}/>} >Ropa</Link>
+                            <Link to='/category/jewelery' >Jewelery</Link>
                             
                             </NavDropdown.Item>
                             <NavDropdown.Item href="#action4">
-                                Joyas
+                            <Link to='/category/electronics' >Electronics</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action5">
-                                Tecnologia
+                            <Link to='/category/category' element={<Category ropa={Attr.to}/>} >Ropa</Link>
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

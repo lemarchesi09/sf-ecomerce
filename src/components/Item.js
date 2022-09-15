@@ -10,7 +10,7 @@ const Item = ({product}) =>{
             <Card.Body className="card-body">
                 <Card.Title className="card-title">{product.title}</Card.Title>
                 <Card.Text>${product.price}</Card.Text>
-                <Link to={`/detalles/${product.id}`} productId={product.id} state={product.id}>Info</Link>
+                <Link to={`/detalles/${product.id}`} >Info</Link>
                 
             </Card.Body>
         </Card>

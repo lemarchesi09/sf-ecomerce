@@ -1,4 +1,5 @@
 import {Button, Card} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Item from "./Item"
 
 const ItemList = ({products}) =>{
@@ -10,7 +11,8 @@ const ItemList = ({products}) =>{
                 
             {products.map((product) =>{
                 return(
-                    <Item product={product}  />
+                    
+                    <Item key = {product.id} product={product}  />
                 )
             })}
 
